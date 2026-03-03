@@ -1,118 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Inscription</title>
+    <title>Inscription au Stage</title>
 </head>
 <body>
-    <div class="container">
-        <form action="submit.php" method="post" class="registration-form">
-            <h1>Formulaire d'Inscription</h1>
-            
-            <fieldset>
-                <legend>Informations Personnelles</legend>
-                <div class="Row">
-                    <div class="ContentRow">
-                        <label for="name">Nom et Prénom :</label>
-                        <input type="text" name="name" id="name" required>
-                    </div>
-                    <div class="ContentRow">
-                        <label for="CIN">CIN :</label>
-                        <input type="number" name="CIN" id="CIN" required>
-                    </div>
-                </div>
-                <div class="ContentRow">
-                    <label for="Naissance">Date et Lieu de Naissance :</label>
-                    <input type="text" name="Naissance" id="Naissance" required>
-                </div>
-                <div class="ContentRow">
-                    <label for="Adresse">Adresse :</label>
-                    <input type="text" name="Adresse" id="Adresse" required>
-                </div>
-                <div class="Row">
-                    <div class="ContentRow">
-                        <label for="Niveau">Niveau d'Étude :</label>
-                        <input type="text" name="Niveau" id="Niveau" required>
-                    </div>
-                    <div class="ContentRow">
-                        <label for="Tel">Téléphone :</label>
-                        <input type="tel" name="Tel" id="Tel" required>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Informations de Stage</legend>
-                <div class="Row">
-                    <div class="ContentRow">
-                        <label for="Eta">Établissement :</label>
-                        <input type="text" name="Eta" id="Eta" required>
-                    </div>
-                    <div class="ContentRow">
-                        <label for="org">Organisme d'accueil :</label>
-                        <input type="text" name="org" id="org" required>
-                    </div>
-                </div>
-                <div class="ContentRow">
-                    <label for="typeS">Type de Stage :</label>
-                    <input type="text" name="typeS" id="typeS" required>
-                </div>
-                <div class="ContentRow">
-                    <label for="SujetS">Sujet du Stage :</label>
-                    <textarea name="SujetS" id="SujetS" rows="4" required></textarea>
-                </div>
-                <div class="Row">
-                    <div class="ContentRow">
-                        <label for="PeriodS">Début du stage :</label>
-                        <input type="date" name="PeriodS" id="PeriodS" required>
-                    </div>
-                    <div class="ContentRow">
-                        <label for="PeriodE">Fin du stage :</label>
-                        <input type="date" name="PeriodE" id="PeriodE" required>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Rémunération</legend>
-                <div class="ContentRow checkbox-group">
-                    <label class="checkbox-label">Stage Payé :</label>
-                    <div class="checkbox-options">
-                        <label class="checkbox-item">
-                            <input type="checkbox" name="Check1" value="Oui">
-                            <span>Oui</span>
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" name="Check1" value="Non">
-                            <span>Non</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="ContentRow">
-                    <label for="mont">Montant de prime :</label>
-                    <input type="number" name="mont" id="mont" step="0.01" placeholder="0.00">
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Signature</legend>
-                <div class="ContentRow">
-                    <label for="sig">Votre Signature :</label>
-                    <input type="text" name="sig" id="sig">
-                </div>
-                <div class="ContentRow">
-                    <label for="ENC">Encadrement :</label>
-                    <input type="text" name="ENC" id="ENC" required>
-                </div>
-            </fieldset>
-
-            <div class="form-buttons">
-                <button type="submit" class="btn-submit">Soumettre</button>
-                <button type="reset" class="btn-reset">Réinitialiser</button>
+    <div class="page-wrapper">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Formulaire d'Inscription</h1>
+                <p>Veuillez remplir les informations ci-dessous pour votre demande de stage.</p>
             </div>
-        </form>
+            
+            <form action="submit.php" method="post" class="registration-form">
+                
+                <fieldset>
+                    <legend><span>1</span> Informations Personnelles</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom et Prénom</label>
+                            <input type="text" name="name" id="name" placeholder="Ex: Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="CIN">Numéro de CIN</label>
+                            <input type="number" name="CIN" id="CIN" placeholder="Ex: 12345678" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Naissance">Date et Lieu de Naissance</label>
+                        <input type="text" name="Naissance" id="Naissance" placeholder="Ex: 01/01/2000 à Paris" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Adresse">Adresse Complète</label>
+                        <input type="text" name="Adresse" id="Adresse" placeholder="Ex: 123 Rue de la République" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="Niveau">Niveau d'Étude</label>
+                            <input type="text" name="Niveau" id="Niveau" placeholder="Ex: Bac+3" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Tel">Téléphone</label>
+                            <input type="tel" name="Tel" id="Tel" placeholder="Ex: +33 6 12 34 56 78" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend><span>2</span> Détails du Stage</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="Eta">Établissement</label>
+                            <input type="text" name="Eta" id="Eta" placeholder="Nom de votre école/université" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="org">Organisme d'Accueil</label>
+                            <input type="text" name="org" id="org" placeholder="Nom de l'entreprise" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="typeS">Type de Stage</label>
+                        <input type="text" name="typeS" id="typeS" placeholder="Ex: Stage PFE, Stage d'été..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="SujetS">Sujet du Stage</label>
+                        <textarea name="SujetS" id="SujetS" rows="3" placeholder="Décrivez brièvement le sujet de votre stage..." required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="PeriodS">Date de Début</label>
+                            <input type="date" name="PeriodS" id="PeriodS" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="PeriodE">Date de Fin</label>
+                            <input type="date" name="PeriodE" id="PeriodE" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend><span>3</span> Rémunération & Validation</legend>
+                    <div class="form-row align-center">
+                        <div class="form-group checkbox-group">
+                            <label class="main-label">Stage Payé ?</label>
+                            <div class="toggle-options">
+                                <label class="radio-container">
+                                    <input type="radio" name="Check1" value="Oui">
+                                    <span class="checkmark"></span>
+                                    Oui
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="Check1" value="Non" checked>
+                                    <span class="checkmark"></span>
+                                    Non
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mont">Montant de la Prime (Si payé)</label>
+                            <div class="input-with-icon">
+                                <span class="currency-icon">€</span>
+                                <input type="number" name="mont" id="mont" step="0.01" placeholder="0.00">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend><span>4</span> Signatures</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sig">Votre Signature</label>
+                            <input type="text" name="sig" id="sig" placeholder="Tapez votre nom complet valant signature">
+                        </div>
+                        <div class="form-group">
+                            <label for="ENC">Encadrant</label>
+                            <input type="text" name="ENC" id="ENC" placeholder="Nom de l'encadrant" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+                    <button type="submit" class="btn btn-primary">Soumettre l'Inscription</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
