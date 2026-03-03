@@ -57,13 +57,13 @@ legend {
     width: 100%;
 }
 
-.Row {
+.ContentRow {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.GridRow {
+.Row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
