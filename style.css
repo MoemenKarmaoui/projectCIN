@@ -183,16 +183,16 @@ button {
 }
 
 @media (max-width: 600px) {
-    .registration-form {
+    .ContentRow {
         padding: 20px;
     }
 
-    .registration-form h1 {
+    .ContentRow h1 {
         font-size: 22px;
         margin-bottom: 20px;
     }
 
-    .form-row {
+    .Row {
         grid-template-columns: 1fr;
     }
 
